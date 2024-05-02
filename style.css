@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ body{
+    background: #eee;
+ }
+ 
+ .container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 2rem;
+ }
+
+ .container .title{
+    font-size: 3.5rem;
+    color:#444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+ .container .search-container{
+   height:10rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+form input{
+   flex:0.5; 
+   border:none;
+   outline:none;
+   padding-top:10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+}
+
+form button{
+   background: tomato;
+   padding: 10px 50px;
+   border: none;
+   outline: none;
+   color:#fff;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+form button:hover{
+   background: red;
+}
+
+form .fa-search,.fa-times{
+   align-self: center;
+   padding:14px 10px;
+   background-color: #fff;
+}
+
+form .fa-times:hover{
+   color: #27ae60;
+   cursor: pointer;
+}
+
+ .container .cocktails-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+
+ .container .cocktails-container .cocktail{
+    text-align: center;
+    padding:3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+ }
+
+ .container .cocktails-container .cocktail:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+ }
+ 
+ .container .cocktails-container .cocktail img{
+    height: 25rem;
+ }
+ 
+ .container .cocktails-container .cocktail:hover img{
+    transform: scale(0.9);
+ }
+ 
+ .container .cocktails-container .cocktail h3{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#444;
+ }
+ 
+ .container .cocktails-container .cocktail:hover h3{
+    color:#27ae60;
+ }
+
+
+ .cocktails-preview{
+   position: fixed;
+   top:0; left:0;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+ }
+
+.cocktails-preview .preview{
+   padding:2rem;
+   background: #fff;
+   position:fixed;
+   border:#444;
+   margin:10rem;
+   width: 60%;
+   height: 90%;
+   overflow-Y: scroll;
+}
+
+.cocktails-preview.active{
+   display: flex;
+}
+
+.cocktails-preview .preview img{
+   height: 30rem;
+}
+
+.cocktails-preview .preview .preview-content .fa-times{
+   margin-left:95%;
+   cursor: pointer;
+   font-size: 2rem;
+}
+
+.cocktails-preview .preview h3{
+   color:#444;
+   padding:.5rem 0;
+   font-size: 2.5rem;
+}
+
+.cocktails-preview .preview p{
+   line-height: 1.5;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:#777;
+}
+
+.cocktails-preview .preview ul{
+   list-style-type: none;
+   line-height: 1.5;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:#777;
+}
+
+.cocktails-preview .preview .lists{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:5rem;
+}
+
+.cocktails-preview .preview .details{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap:wrap;
+}
+
+.cocktails-preview .preview .details .left-details{
+   padding-right: 10%;
+   border-right:2px solid #999;
+}
+
+.cocktails-preview .preview .details .right-details{
+   padding-left: 5%;
+}
+
+@media screen and (max-width: 1113px) {
+   .cocktails-preview .preview .details .right-details{
+      padding-left:0;
+   }
+}
+
+@media screen and (max-width: 1051px) {
+   .cocktails-preview .preview .details .left-details{
+      padding-right: 10%;
+      border-right:none;
+   }
+}
+
+@media screen and (max-width: 567px) {
+   .cocktails-preview .preview .details .left-details{
+      height:20rem;
+   }
+}
+
+@media screen and (max-width: 567px) {
+   .cocktails-preview .preview img{
+      height:20rem;
+   }
+}
+
+@media screen and (max-width: 567px) {
+   .cocktails-preview .preview h3{
+      font-size: 2rem;
+   }
+
+   .cocktails-preview .preview .preview-content .fa-times{
+      margin-top: -15%;
+      margin-left:95%;
+      cursor: pointer;
+      font-size: 1.8rem;
+   }
+}
+

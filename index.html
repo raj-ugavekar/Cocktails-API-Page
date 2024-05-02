@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCKTAILS</title>
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/c4254e24a8"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <div class="container">
+
+        <h3 class="title"> COCKTAILS </h3>
+
+        <form class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="What you are looking for?" autocomplete="off" >
+            <i class="fas fa-times" id="clearBtn" > </i>
+            <button type="button" id="btn" onclick="display()" >Search </button>
+        </form>
+            <div>
+
+                <div class="cocktails-container" id="appendData">
+                    <div class="cocktails-content">
+
+                    </div>
+   
+                </div>
+     
+                <div class="cocktails-preview">
+
+                 <div class="preview" id="addData" >
+     
+                 </div>
+                 
+                 </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
